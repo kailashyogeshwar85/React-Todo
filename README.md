@@ -7,7 +7,9 @@ is a bit complex for beginner and who has not used all ES6 concepts.
 
 ## Pre-requisites
 **Nodejs**  - v4.4.*
+
 **Webpack** - v^1.4.0
+
 **ReacJS**  - latest
 
 
@@ -16,7 +18,7 @@ is a bit complex for beginner and who has not used all ES6 concepts.
 npm install && npm start
 ```
 
-Open your browser at http://localhost:4040 to play with the App.
+Open your browser at [http://localhost:4040](http://localhost:4040) to play with the App.
 
 
 **TODO**: 
@@ -26,4 +28,5 @@ Open your browser at http://localhost:4040 to play with the App.
 -  Using css for components
 
 **Contact Me** :smile:
+
 If any questions mail me at kailashyogeshwar85@gmail.com

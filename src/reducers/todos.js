@@ -4,10 +4,7 @@
 
 const defaultState = {
   todo: {
-    items: [{
-      message: 'jQuery',
-      completed: false
-    }]
+    items: []
   },
   message: ''
 };
