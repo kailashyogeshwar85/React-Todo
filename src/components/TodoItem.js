@@ -15,14 +15,17 @@ import * as TodoActions           from '../actions';
 class TodoItem extends React.Component {
   
   constructor(){
-    super()
+    super();
+    console.log(this)
   }
 
   onDeleteClick(){
+    console.log("in delete todo")
     this.props.deleteTodo(this.props.index);
   }
 
   onCompletedClick(){
+    console.log("in complete todo")
     this.props.completeTodo(this.props.index)
   }
 
@@ -46,8 +49,12 @@ class TodoItem extends React.Component {
 }
 
 
+const mapStateToProps = state => {
+  return { todo : state.todos.todo };
+}
+
 const mapDispatchToProps = dispatch => {
   return bindActionCreators(TodoActions, dispatch)
 }
 
-export default connect(mapDispatchToProps)(TodoItem);
+export default connect(mapStateToProps, mapDispatchToProps)(TodoItem);
