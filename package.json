@@ -5,7 +5,8 @@
   "main": "./src/index.js",
   "scripts": {
     "dev": "webpack",
-    "start": "webpack-dev-server --colors --watch --progress --inline"
+    "start": "webpack-dev-server --colors --watch --progress --inline",
+    "build": "webpack --progress --colors"
   },
   "keywords": [
     "react",

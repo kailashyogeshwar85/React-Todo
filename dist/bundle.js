@@ -54982,17 +54982,22 @@
 	  function TodoItem() {
 	    _classCallCheck(this, TodoItem);
 
-	    return _possibleConstructorReturn(this, (TodoItem.__proto__ || Object.getPrototypeOf(TodoItem)).call(this));
+	    var _this = _possibleConstructorReturn(this, (TodoItem.__proto__ || Object.getPrototypeOf(TodoItem)).call(this));
+
+	    console.log(_this);
+	    return _this;
 	  }
 
 	  _createClass(TodoItem, [{
 	    key: 'onDeleteClick',
 	    value: function onDeleteClick() {
+	      console.log("in delete todo");
 	      this.props.deleteTodo(this.props.index);
 	    }
 	  }, {
 	    key: 'onCompletedClick',
 	    value: function onCompletedClick() {
+	      console.log("in complete todo");
 	      this.props.completeTodo(this.props.index);
 	    }
 
@@ -55034,11 +55039,15 @@
 	  return TodoItem;
 	}(_react2.default.Component);
 
+	var mapStateToProps = function mapStateToProps(state) {
+	  return { todo: state.todos.todo };
+	};
+
 	var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 	  return (0, _redux.bindActionCreators)(TodoActions, dispatch);
 	};
 
-	exports.default = (0, _reactRedux.connect)(mapDispatchToProps)(TodoItem);
+	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(TodoItem);
 
 /***/ },
 /* 707 */
