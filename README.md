@@ -20,6 +20,8 @@ npm install && npm start
 
 Open your browser at [http://localhost:4040](http://localhost:4040) to play with the App.
 
+Here is the demo hosted on github [https://kailashyogeshwar85.github.io/React-Todo/](Demo)
+
 
 **TODO**: 
 -  To persist the todo data in MongoDB
