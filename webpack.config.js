@@ -4,7 +4,7 @@ const path = require('path');
 module.exports = {
   entry: './src/index.js',
   output: {
-    path: './dist',
+    path: path.resolve(__dirname, 'dist'),
     publicPath: '/dist/',
     filename: 'bundle.js'
   },
@@ -13,14 +13,18 @@ module.exports = {
     port : 4040
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel',
-        query: {
-          presets: ['es2015', 'react']
-       }
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: ['es2015', 'react']
+            }
+          }
+        ]
       }
     ]
   }
